@@ -5,7 +5,6 @@ import L from 'leaflet';
 import PropTypes from 'prop-types';
 
 
-// Fix Leaflet icon issue
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
@@ -14,7 +13,6 @@ L.Icon.Default.mergeOptions({
 });
 
 
-// Custom icons for different asset types
 const getMarkerIcon = (type) => {
   const iconSize = [25, 41];
   const iconAnchor = [12, 41];
